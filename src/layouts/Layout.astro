@@ -1,3 +1,7 @@
+---
+import { Font } from "astro:assets";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,6 +19,14 @@
     <meta
       name="generator"
       content={Astro.generator}
+    />
+    <Font
+      cssVariable="--font-raleway"
+      preload
+    />
+    <Font
+      cssVariable="--font-open-sans"
+      preload
     />
     <title>Fylo</title>
   </head>

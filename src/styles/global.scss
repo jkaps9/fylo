@@ -29,6 +29,16 @@ $spacing-1000: 80;
 
 $colors-gradient-1: linear-gradient(132.02deg, #63e1d9 0%, #34a0cd 100%);
 
-h1 {
-  color: $color-primary;
+body {
+  font-family: var(--font-open-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-raleway);
+  font-weight: 700;
 }
