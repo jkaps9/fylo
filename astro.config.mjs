@@ -25,7 +25,10 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "/src/styles/_variables.scss" as *;`,
+          additionalData: `
+          @use "jk-sass-lib" as lib;
+          @use "/src/styles/_variables.scss" as *;
+          `,
         },
       },
     },

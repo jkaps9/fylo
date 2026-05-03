@@ -1,7 +1,4 @@
 @use "jk-sass-lib/sass/reset";
-@use "jk-sass-lib" as lib with (
-  $color-primary: #62e0d9
-);
 
 body {
   background-color: $colors-navy-950;
