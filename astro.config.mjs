@@ -1,5 +1,24 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  fonts: [
+    {
+      cssVariable: "--font-raleway",
+      fallbacks: ["sans-serif"],
+      name: "Raleway",
+      provider: fontProviders.google(),
+      styles: ["normal"],
+      weights: ["400 700"],
+    },
+    {
+      cssVariable: "--font-open-sans",
+      fallbacks: ["sans-serif"],
+      name: "Open Sans",
+      provider: fontProviders.google(),
+      styles: ["normal"],
+      weights: ["400 700"],
+    },
+  ],
+});

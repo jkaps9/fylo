@@ -12,7 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.2.1"
+    "astro": "^6.2.1",
+    "jk-sass-lib": "^1.0.2",
+    "sass": "^1.99.0"
   },
   "devDependencies": {
     "prettier": "^3.8.3",
