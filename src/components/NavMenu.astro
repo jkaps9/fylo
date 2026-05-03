@@ -4,26 +4,25 @@ import Logo from "./Logo.astro";
 
 <nav class="navbar">
   <Logo />
-  <div class="nav-list-wrapper">
-    <ul
-      id="main-menu"
-      class="nav-list"
-    >
-      <li class="nav-list__item">
-        <a href="#features">Features</a>
-      </li>
-      <li class="nav-list__item">
-        <a href="#testimonials">Testimonials</a>
-      </li>
-      <li class="nav-list__item">
-        <a href="#early-access">Sign In</a>
-      </li>
-    </ul>
-  </div>
+  <ul
+    id="main-menu"
+    class="nav-list"
+  >
+    <li class="nav-list__item">
+      <a href="#features">Features</a>
+    </li>
+    <li class="nav-list__item">
+      <a href="#testimonials">Testimonials</a>
+    </li>
+    <li class="nav-list__item">
+      <a href="#early-access">Sign In</a>
+    </li>
+  </ul>
 </nav>
 
 <style lang="scss">
   .navbar {
+    align-items: center;
     display: flex;
     justify-content: space-between;
   }
@@ -37,9 +36,15 @@ import Logo from "./Logo.astro";
   .nav-list__item {
     a {
       color: inherit;
+      display: block;
       font-family: var(--font-raleway);
       font-size: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+      line-height: 1.2;
       text-decoration: none;
+      text-wrap: nowrap;
+      &:hover {
+        font-weight: 700;
+      }
     }
   }
 </style>
