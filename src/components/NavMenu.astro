@@ -1,0 +1,45 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<nav class="navbar">
+  <Logo />
+  <div class="nav-list-wrapper">
+    <ul
+      id="main-menu"
+      class="nav-list"
+    >
+      <li class="nav-list__item">
+        <a href="#features">Features</a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#testimonials">Testimonials</a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#early-access">Sign In</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style lang="scss">
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: $spacing-300;
+    list-style-type: none;
+  }
+
+  .nav-list__item {
+    a {
+      color: inherit;
+      font-family: var(--font-raleway);
+      font-size: 0.75rem;
+      text-decoration: none;
+    }
+  }
+</style>

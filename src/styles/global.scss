@@ -1,35 +1,11 @@
 @use "jk-sass-lib/sass/reset";
-@use "jk-sass-lib" as * with (
+@use "jk-sass-lib" as lib with (
   $color-primary: #62e0d9
 );
 
-$colors-white: #ffffff;
-$colors-black: #000000;
-$colors-red-500: #ff4242;
-$colors-gray-400: #c0c0c0;
-$colors-blue-250: #8adae3;
-$colors-blue-300: #62e0d9;
-$colors-navy-50: #dfe4f0;
-$colors-navy-800: #202a3c;
-$colors-navy-850: #1b2330;
-$colors-navy-900: #181f2b;
-$colors-navy-950: #0b1524;
-
-$spacing-0: 0;
-$spacing-100: 8;
-$spacing-200: 16;
-$spacing-300: 24;
-$spacing-400: 32;
-$spacing-500: 40;
-$spacing-600: 48;
-$spacing-700: 56;
-$spacing-800: 64;
-$spacing-900: 72;
-$spacing-1000: 80;
-
-$colors-gradient-1: linear-gradient(132.02deg, #63e1d9 0%, #34a0cd 100%);
-
 body {
+  background-color: $colors-navy-950;
+  color: $colors-white;
   font-family: var(--font-open-sans);
 }
 
