@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Feature from "../components/Feature.astro";
 import Productive from "../components/Productive.astro";
+import Testimonial from "../components/Testimonial.astro";
 import "../styles/global.scss";
 ---
 
@@ -39,6 +40,34 @@ import "../styles/global.scss";
     </div>
   </section>
   <Productive />
+
+  <section class="testimonials">
+    <div class="container">
+      <img
+        src="/src/assets/images/bg-quotes.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <Testimonial
+        quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
+        authorName="Satish Patel"
+        authorTitle="Founder & CEO, Huddle"
+        authorImage="/src/assets/images/profile-1.jpg"
+      />
+      <Testimonial
+        quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
+        authorName="Bruce McKenzie"
+        authorTitle="Founder & CEO, Huddle"
+        authorImage="/src/assets/images/profile-2.jpg"
+      />
+      <Testimonial
+        quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
+        authorName="Iva Boyd"
+        authorTitle="Founder & CEO, Huddle"
+        authorImage="/src/assets/images/profile-3.jpg"
+      />
+    </div>
+  </section>
 </Layout>
 
 <style lang="scss">

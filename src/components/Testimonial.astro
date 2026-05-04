@@ -1,0 +1,23 @@
+---
+const { quote, authorName, authorTitle, authorImage } = Astro.props;
+---
+
+<div class="testimonial">
+  <blockquote>
+    <p>
+      {quote}
+    </p>
+  </blockquote>
+  <div class="author">
+    <div class="author__image">
+      <img
+        src={authorImage}
+        alt=`{authorName} image`
+      />
+    </div>
+    <div class="author__name-and-title">
+      <p>{authorName}</p>
+      <cite>{authorTitle}</cite>
+    </div>
+  </div>
+</div>
