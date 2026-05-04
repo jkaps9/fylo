@@ -173,7 +173,7 @@ import Logo from "./Logo.astro";
 
         &:hover {
           cursor: pointer;
-          color: $colors-blue-300;
+          font-weight: 700;
         }
       }
 
@@ -186,10 +186,13 @@ import Logo from "./Logo.astro";
           border: 1px solid $colors-white;
           border-radius: lib.$radius-full;
           padding: 4px;
+          transform: translateY(0);
+          transition: transform 0.3s ease 0.1s;
 
           &:hover {
             cursor: pointer;
             border-color: $colors-blue-300;
+            transform: translateY(-4px);
 
             .fill-hover {
               fill: $colors-blue-300;
