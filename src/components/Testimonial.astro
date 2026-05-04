@@ -30,7 +30,11 @@ const { quote, authorName, authorTitle, authorImage } = Astro.props;
     border-radius: 4px;
     gap: $spacing-300;
     max-width: lib.rem(480);
-    padding: $spacing-500;
+    padding: clamp($spacing-300, 1.3239rem + 0.7512vw, $spacing-400)
+      $spacing-300;
+
+    position: relative;
+    z-index: 2;
   }
 
   .author {
@@ -53,8 +57,9 @@ const { quote, authorName, authorTitle, authorImage } = Astro.props;
         letter-spacing: 0.5px;
       }
       cite {
-        font-size: lib.rem(7);
+        font-size: lib.rem(8);
         letter-spacing: 0.5px;
+        font-style: normal;
       }
     }
   }
