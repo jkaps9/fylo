@@ -1,0 +1,36 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="hero">
+  <div class="hero__bg-image">
+    <picture>
+      <source
+        media="(min-width: 768px)"
+        srcset="/src/assets/images/bg-curvy-desktop.svg"
+      />
+      <img
+        src="/src/assets/images/bg-curvy-mobile.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </picture>
+  </div>
+  <div class="container">
+    <div class="hero__image">
+      <img
+        src="/src/assets/images/illustration-intro.png"
+        alt="illustration of two people; one taking a file out of a big folder, the other putting a file into the big folder. the big folder has a bunch of files in it"
+      />
+    </div>
+    <div class="hero__content">
+      <h1>All your files in one secure location, accessible anywhere.</h1>
+      <p>
+        Fylo stores all your most important files in one secure location. Access
+        them wherever you need, share and collaborate with friends family, and
+        co-workers.
+      </p>
+      <Button text="Get Started" />
+    </div>
+  </div>
+</section>
