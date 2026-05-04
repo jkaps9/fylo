@@ -1,0 +1,33 @@
+---
+const { text, type = "button" } = Astro.props;
+---
+
+<button type={type}>
+  {text}
+</button>
+
+<style lang="scss">
+  button {
+    @include lib.button-reset;
+    align-items: center;
+    background: $colors-gradient-1;
+    border-radius: 28px;
+    box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.16);
+    display: flex;
+    font-family: var(--font-raleway);
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.2;
+    min-height: lib.rem(56);
+    padding: $spacing-200 0;
+    width: lib.rem(240);
+    @include lib.respond-to(md) {
+      width: lib.rem(280);
+    }
+
+    &:hover {
+      background: $colors-blue-250;
+    }
+  }
+</style>
