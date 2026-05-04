@@ -92,7 +92,7 @@
   .productive {
     background: $colors-navy-900;
 
-    padding-bottom: 400px; //TODO: update me
+    padding-bottom: clamp(lib.rem(120), 10.0352rem + -2.8169vw, lib.rem(150));
     .container {
       @include lib.flex-center(column);
       gap: $spacing-600;
