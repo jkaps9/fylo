@@ -96,6 +96,12 @@
     .container {
       @include lib.flex-center(column);
       gap: $spacing-600;
+      @include lib.respond-to(lg) {
+        display: grid;
+        gap: $spacing-700;
+        grid-template-columns: 3fr 2fr;
+        max-width: 1180px;
+      }
     }
     &__text {
       @include lib.flex-center(column);
@@ -114,13 +120,24 @@
         gap: $spacing-100;
         text-decoration: none;
         font-size: lib.rem(14);
-
+        position: relative;
+        &::after {
+          background-color: $colors-blue-300;
+          bottom: 0;
+          content: "";
+          height: 1px;
+          position: absolute;
+          width: 100%;
+        }
         svg {
           height: lib.rem(12);
           width: lib.rem(12);
         }
         &:hover {
           color: $colors-white;
+          &::after {
+            background-color: $colors-white;
+          }
           svg #arrow-background {
             fill: $colors-white;
           }
