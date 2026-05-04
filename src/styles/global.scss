@@ -4,7 +4,7 @@ body {
   background-color: $colors-navy-950;
   color: $colors-white;
   font-family: var(--font-open-sans);
-  padding: clamp(1.5rem, 0.2676rem + 5.2582vw, 5rem) 1.25rem;
+  padding: clamp(1.5rem, 0.2676rem + 5.2582vw, 5rem) 0;
 }
 
 h1,

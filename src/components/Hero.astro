@@ -6,7 +6,7 @@ import Button from "./Button.astro";
   <div class="hero__bg-image">
     <picture>
       <source
-        media="(min-width: 768px)"
+        media="(min-width: 376px)"
         srcset="/src/assets/images/bg-curvy-desktop.svg"
       />
       <img
@@ -23,7 +23,7 @@ import Button from "./Button.astro";
         alt="illustration of two people; one taking a file out of a big folder, the other putting a file into the big folder. the big folder has a bunch of files in it"
       />
     </div>
-    <div class="hero__content">
+    <div class="hero__text">
       <h1>All your files in one secure location, accessible anywhere.</h1>
       <p>
         Fylo stores all your most important files in one secure location. Access
@@ -34,3 +34,30 @@ import Button from "./Button.astro";
     </div>
   </div>
 </section>
+
+<style lang="scss">
+  .hero {
+    margin: $spacing-500 0 lib.rem(140);
+    position: relative;
+    .container {
+      @include lib.flex-center(column);
+      gap: clamp($spacing-600, 4.8521rem + -1.5023vw, $spacing-900);
+    }
+    &__bg-image {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: -1;
+    }
+    &__text {
+      @include lib.flex-center(column);
+      align-self: stretch;
+      gap: clamp($spacing-300, 1.1479rem + 1.5023vw, $spacing-500);
+      text-align: center;
+    }
+  }
+</style>
