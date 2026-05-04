@@ -1,5 +1,6 @@
 const form = document.querySelector(".sign-up__form");
 const email = document.getElementById("email");
+const errorMessage = document.querySelector("#email + .error-message > p");
 
 if (form) {
   form.addEventListener("submit", (e) => {
@@ -23,13 +24,11 @@ if (form) {
 
 function showError() {
   if (email.validity.valueMissing) {
-    email.setCustomValidity("You need to enter an email address");
+    errorMessage.textContent = "You need to enter an email address";
   } else if (email.validity.typeMismatch) {
-    email.setCustomValidity("Entered value needs to be an email address.");
+    errorMessage.textContent = "Entered value needs to be an email address.";
   } else if (!email.validity.valid) {
-    email.setCustomValidity(
-      "You need to enter a proper email address such as example@email.com",
-    );
+    errorMessage.textContent = "Error, please check your email";
   }
   email.classList.add("error");
 }
