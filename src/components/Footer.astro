@@ -73,6 +73,15 @@ import Logo from "./Logo.astro";
       display: flex;
       flex-direction: column;
       gap: $spacing-500;
+
+      @include lib.respond-to(lg) {
+        align-items: start;
+        display: grid;
+      }
+    }
+
+    :global(.logo) {
+      grid-column: 1 / span 4;
     }
 
     ul {
@@ -89,6 +98,7 @@ import Logo from "./Logo.astro";
       }
 
       &.social-links {
+        align-items: center;
         flex-direction: row;
         margin: 0 auto;
 
@@ -96,6 +106,22 @@ import Logo from "./Logo.astro";
           border: 1px solid $colors-white;
           border-radius: lib.$radius-full;
           padding: 4px;
+        }
+      }
+
+      &.contact-info {
+        @include lib.respond-to(md) {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          justify-items: end;
+          max-width: lib.rem(632);
+          & > li:first-child {
+            grid-row: 1 / span 2;
+          }
+        }
+
+        @include lib.respond-to(lg) {
+          justify-items: start;
         }
       }
     }
