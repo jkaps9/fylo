@@ -83,8 +83,7 @@ import Button from "./Button.astro";
         }
       }
 
-      #form-submit {
-        // TODO: figure out why this isn't working
+      :global(button) {
         @include lib.respond-to(lg) {
           min-width: 0;
           width: 200px;
