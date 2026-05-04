@@ -1,0 +1,95 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="sign-up">
+  <div class="container">
+    <div class="sign-up__text">
+      <h2>Get early access today</h2>
+      <p>
+        It only takes a minute to sign up and our free starter tier is extremely
+        generous. If you have any questions, our support team would be happy to
+        help you.
+      </p>
+    </div>
+    <form class="sign-up__form">
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="email@example.com"
+        autocomplete="email"
+        aria-label="email input"
+      />
+      <Button
+        text="Get Started For Free"
+        type="submit"
+        id="form-submit"
+      />
+    </form>
+  </div>
+</section>
+
+<style lang="scss">
+  .sign-up {
+    background: $colors-navy-900;
+    .container {
+      @include lib.flex-center(column);
+      background-color: $colors-navy-850;
+      border-radius: 9px;
+      box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.25);
+      gap: $spacing-400;
+      padding: clamp($spacing-500, 2.3239rem + 0.7512vw, $spacing-600)
+        clamp($spacing-300, 0.2676rem + 5.2582vw, $spacing-1000);
+      text-align: center;
+      @include lib.respond-to(md) {
+        max-width: lib.rem(480);
+      }
+      @include lib.respond-to(lg) {
+        max-width: lib.rem(863);
+      }
+    }
+    &__text {
+      @include lib.flex-center(column);
+      gap: $spacing-200;
+      @include lib.respond-to(lg) {
+        max-width: lib.rem(673);
+      }
+    }
+    &__form {
+      @include lib.flex-center(column);
+      align-items: stretch;
+      align-self: stretch;
+      gap: $spacing-300;
+      @include lib.respond-to(lg) {
+        flex-direction: row;
+      }
+      input {
+        background: $colors-white;
+        border: none;
+        border-radius: 24px;
+        box-shadow: 1px 1px 3px 0 rgba(7, 4, 59, 0.16);
+        color: $colors-gray-400;
+        flex: 1;
+        font-family: var(--font-open-sans);
+        font-size: lib.rem(14);
+        line-height: 1.5;
+        min-height: 3rem;
+        padding: 0 $spacing-400;
+        text-align: center;
+
+        @include lib.respond-to(md) {
+          text-align: start;
+        }
+      }
+
+      #form-submit {
+        // TODO: figure out why this isn't working
+        @include lib.respond-to(lg) {
+          min-width: 0;
+          width: 200px;
+        }
+      }
+    }
+  }
+</style>

@@ -1,8 +1,11 @@
 ---
-const { text, type = "button" } = Astro.props;
+const { text, type = "button", id = "" } = Astro.props;
 ---
 
-<button type={type}>
+<button
+  type={type}
+  id={id}
+>
   {text}
 </button>
 
@@ -21,11 +24,10 @@ const { text, type = "button" } = Astro.props;
     line-height: 1.2;
     min-height: lib.rem(56);
     padding: $spacing-200 0;
-    width: lib.rem(240);
+    min-width: lib.rem(240);
     @include lib.respond-to(md) {
-      width: lib.rem(280);
+      min-width: lib.rem(280);
     }
-
     &:hover {
       background: $colors-blue-250;
     }
