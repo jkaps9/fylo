@@ -12,15 +12,23 @@ import Button from "./Button.astro";
         help you.
       </p>
     </div>
-    <form class="sign-up__form">
+    <form
+      class="sign-up__form"
+      novalidate
+    >
       <input
         id="email"
         name="email"
         type="email"
+        oninput="this.setCustomValidity('')"
         placeholder="email@example.com"
         autocomplete="email"
         aria-label="email input"
+        required
       />
+      <div class="error-message">
+        <p>Error, please check your email</p>
+      </div>
       <Button
         text="Get Started For Free"
         type="submit"
@@ -30,9 +38,14 @@ import Button from "./Button.astro";
   </div>
 </section>
 
+<script>
+  import "../scripts/formValidation.js";
+</script>
+
 <style lang="scss">
   .sign-up {
     background: $colors-navy-900;
+
     .container {
       @include lib.flex-center(column);
       background-color: $colors-navy-850;
@@ -46,6 +59,7 @@ import Button from "./Button.astro";
       position: relative;
       text-align: center;
       z-index: 10;
+
       @include lib.respond-to(md) {
         max-width: lib.rem(480);
       }
@@ -55,6 +69,7 @@ import Button from "./Button.astro";
         margin-bottom: lib.rem(calc(-275 / 2));
       }
     }
+
     &__text {
       @include lib.flex-center(column);
       gap: $spacing-200;
@@ -62,17 +77,19 @@ import Button from "./Button.astro";
         max-width: lib.rem(673);
       }
     }
+
     &__form {
       @include lib.flex-center(column);
       align-items: stretch;
       align-self: stretch;
       gap: $spacing-300;
+      position: relative;
       @include lib.respond-to(lg) {
         flex-direction: row;
       }
       input {
         background: $colors-white;
-        border: none;
+        border: 2px solid transparent;
         border-radius: 24px;
         box-shadow: 1px 1px 3px 0 rgba(7, 4, 59, 0.16);
         color: $colors-navy-950;
@@ -90,9 +107,25 @@ import Button from "./Button.astro";
         &:focus-visible {
           box-shadow: 2px 3px 6px 0 rgba(7, 4, 59, 0.16);
         }
+        &.error,
+        &:user-invalid {
+          border-color: $colors-red-500;
+        }
         @include lib.respond-to(md) {
           text-align: start;
         }
+      }
+
+      .error-message {
+        color: $colors-red-500;
+        display: none;
+        position: absolute;
+        left: $spacing-400;
+        top: calc(100% + $spacing-100);
+      }
+
+      input.error + .error-message {
+        display: block;
       }
 
       :global(button) {
