@@ -47,13 +47,14 @@ import "../styles/global.scss";
     padding-bottom: clamp(lib.rem(146), 10.3081rem + -1.3146vw, lib.rem(160));
 
     .container {
+      justify-content: space-between;
       justify-items: center;
       display: grid;
       row-gap: $spacing-1000;
       grid-template-columns: 1fr;
       max-width: lib.rem(907);
       @include lib.respond-to(md) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: lib.rem(363) lib.rem(384);
       }
     }
   }

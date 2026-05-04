@@ -22,8 +22,12 @@ h1 {
   font-size: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
 }
 
+h2 {
+  font-size: lib.rem(20);
+}
+
 p {
-  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
+  font-size: 0.875rem;
 }
 
 .container {
