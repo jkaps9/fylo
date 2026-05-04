@@ -68,5 +68,36 @@ import Logo from "./Logo.astro";
 <style lang="scss">
   footer {
     background-color: $colors-navy-950;
+    padding-bottom: 3rem;
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-500;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-200;
+      padding: 0;
+
+      li {
+        align-items: flex-start;
+        display: flex;
+        gap: $spacing-200;
+      }
+
+      &.social-links {
+        flex-direction: row;
+        margin: 0 auto;
+
+        .social-links__item {
+          border: 1px solid $colors-white;
+          border-radius: lib.$radius-full;
+          padding: 4px;
+        }
+      }
+    }
   }
 </style>
