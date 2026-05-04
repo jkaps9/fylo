@@ -119,9 +119,12 @@ import Button from "./Button.astro";
       .error-message {
         color: $colors-red-500;
         display: none;
-        position: absolute;
         left: $spacing-400;
-        top: calc(100% + $spacing-100);
+        position: absolute;
+        top: 38%;
+        @include lib.respond-to(lg) {
+          top: calc(100% + $spacing-100);
+        }
       }
 
       input.error + .error-message {
