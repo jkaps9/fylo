@@ -75,7 +75,7 @@ import Button from "./Button.astro";
         border: none;
         border-radius: 24px;
         box-shadow: 1px 1px 3px 0 rgba(7, 4, 59, 0.16);
-        color: $colors-gray-400;
+        color: $colors-navy-950;
         flex: 1;
         font-family: var(--font-open-sans);
         font-size: lib.rem(14);
@@ -83,7 +83,13 @@ import Button from "./Button.astro";
         min-height: 3rem;
         padding: 0 $spacing-400;
         text-align: center;
-
+        width: stretch;
+        &::placeholder {
+          color: $colors-gray-400;
+        }
+        &:focus-visible {
+          box-shadow: 2px 3px 6px 0 rgba(7, 4, 59, 0.16);
+        }
         @include lib.respond-to(md) {
           text-align: start;
         }
