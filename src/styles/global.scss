@@ -1,7 +1,7 @@
 @use "jk-sass-lib/sass/reset";
 
 body {
-  background-color: $colors-navy-950;
+  background-color: $colors-navy-800;
   color: $colors-white;
   font-family: var(--font-open-sans);
   padding: clamp(1.5rem, 0.2676rem + 5.2582vw, 5rem) 0;
@@ -15,6 +15,15 @@ h5,
 h6 {
   font-family: var(--font-raleway);
   font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
 }
 
 .container {

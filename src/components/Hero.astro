@@ -42,6 +42,7 @@ import Button from "./Button.astro";
     .container {
       @include lib.flex-center(column);
       gap: clamp($spacing-600, 4.8521rem + -1.5023vw, $spacing-900);
+      max-width: lib.rem(734);
     }
     &__bg-image {
       position: absolute;
