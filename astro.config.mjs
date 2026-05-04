@@ -33,5 +33,6 @@ export default defineConfig({
       },
     },
   },
-  site: "https://jkaps9.github.io/fylo",
+  site: "https://jkaps9.github.io",
+  base: "/fylo",
 });
