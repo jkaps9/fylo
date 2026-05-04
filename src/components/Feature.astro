@@ -1,0 +1,31 @@
+---
+const { imagePath, header, text } = Astro.props;
+---
+
+<div class="feature">
+  <div class="feature__image">
+    <img
+      src={imagePath}
+      alt=""
+      aria-hidden="true"
+    />
+  </div>
+  <div class="feature__text">
+    <h2>{header}</h2>
+    <p>{text}</p>
+  </div>
+</div>
+
+<style lang="scss">
+  .feature {
+    @include lib.flex-center(column);
+    gap: clamp($spacing-200, 1.6761rem + -0.7512vw, $spacing-300);
+    max-width: lib.rem(363);
+    text-align: center;
+
+    &__text {
+      @include lib.flex-center(column);
+      gap: $spacing-100;
+    }
+  }
+</style>
