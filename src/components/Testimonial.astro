@@ -21,3 +21,41 @@ const { quote, authorName, authorTitle, authorImage } = Astro.props;
     </div>
   </div>
 </div>
+
+<style lang="scss">
+  .testimonial {
+    @include lib.flex-center(column);
+    align-items: flex-start;
+    background: $colors-navy-800;
+    border-radius: 4px;
+    gap: $spacing-300;
+    max-width: lib.rem(480);
+    padding: $spacing-500;
+  }
+
+  .author {
+    @include lib.flex-center();
+    gap: $spacing-100;
+
+    &__image {
+      border-radius: lib.$radius-full;
+      max-height: 1.5rem;
+      max-width: 1.5rem;
+      overflow: hidden;
+    }
+
+    &__name-and-title {
+      @include lib.flex-center(column);
+      align-items: flex-start;
+      p {
+        font-size: lib.rem(10);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      cite {
+        font-size: lib.rem(7);
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+</style>
