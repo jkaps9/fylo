@@ -39,14 +39,20 @@ import Button from "./Button.astro";
       border-radius: 9px;
       box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.25);
       gap: $spacing-400;
+      height: lib.rem(353);
+      margin-bottom: lib.rem(calc(-353 / 2));
       padding: clamp($spacing-500, 2.3239rem + 0.7512vw, $spacing-600)
         clamp($spacing-300, 0.2676rem + 5.2582vw, $spacing-1000);
+      position: relative;
       text-align: center;
+      z-index: 10;
       @include lib.respond-to(md) {
         max-width: lib.rem(480);
       }
       @include lib.respond-to(lg) {
         max-width: lib.rem(863);
+        height: lib.rem(275);
+        margin-bottom: lib.rem(calc(-275 / 2));
       }
     }
     &__text {
